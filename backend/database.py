@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timezone
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "fraud_detection.db")
+DB_PATH = os.path.join("/tmp", "fraud_detection.db")
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)
