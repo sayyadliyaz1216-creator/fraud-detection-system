@@ -24,7 +24,7 @@ export default function AlertsPage({ setActivePage, onSelectCase }) {
   const fetchAlerts = async () => {
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:8000/api/alerts');
+      const res = await fetch('/api/alerts');
       if (!res.ok) throw new Error('Failed to retrieve alerts');
       const data = await res.json();
       setAlerts(data);

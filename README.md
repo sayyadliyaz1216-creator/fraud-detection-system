@@ -72,8 +72,8 @@ Open a terminal in `backend`:
 cd backend
 python -m uvicorn main:app --reload --port 8000
 ```
-Backend API will be running at: `http://localhost:8000`  
-Interactive Swagger Docs: `http://localhost:8000/docs`
+Backend API will be running at: ``  
+Interactive Swagger Docs: `/docs`
 
 ### Step 2: Start Frontend (React + Vite)
 Open a second terminal in `frontend`:

@@ -26,7 +26,7 @@ export default function CasesPage({ selectedCaseRef }) {
   const fetchCases = async () => {
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:8000/api/cases');
+      const res = await fetch('/api/cases');
       if (!res.ok) throw new Error('Failed to load fraud investigation cases');
       const data = await res.json();
       setCases(data);
@@ -71,7 +71,7 @@ export default function CasesPage({ selectedCaseRef }) {
       setSuccessMsg('');
       setError('');
 
-      const res = await fetch(`http://localhost:8000/api/cases/${selectedCase.id}`, {
+      const res = await fetch(`/api/cases/${selectedCase.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

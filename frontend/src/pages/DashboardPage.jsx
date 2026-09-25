@@ -23,8 +23,8 @@ export default function DashboardPage({ setActivePage }) {
       setLoading(true);
 
       const [statsRes, mlRes] = await Promise.all([
-        fetch('http://localhost:8000/api/dashboard/stats'),
-        fetch('http://localhost:8000/api/ml/metrics')
+        fetch('/api/dashboard/stats'),
+        fetch('/api/ml/metrics')
       ]);
 
       if (!statsRes.ok) throw new Error('Failed to load dashboard metrics');

@@ -29,7 +29,7 @@ export default function App() {
   // Poll or fetch initial alert count from FastAPI backend
   const refreshAlertCount = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/alerts');
+      const res = await fetch('/api/alerts');
       if (res.ok) {
         const data = await res.json();
         setAlertCount(data.length);

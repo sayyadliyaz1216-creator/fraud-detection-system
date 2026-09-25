@@ -32,7 +32,7 @@ export default function TransactionPage({ onTransactionProcessed, setActivePage 
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/api/transactions', {
+      const response = await fetch('/api/transactions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -57,7 +57,7 @@ export default function TransactionPage({ onTransactionProcessed, setActivePage 
         onTransactionProcessed(result);
       }
     } catch (err) {
-      setError(err.message || 'Could not connect to FastAPI server at http://localhost:8000');
+      setError(err.message || 'Could not connect to FastAPI server at ');
     } finally {
       setLoading(false);
     }
